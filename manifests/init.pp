@@ -378,20 +378,6 @@ class varnish (
     require    => Package[$varnish::package],
   }
 
-  file { 'varnish.conf':
-    ensure  => $varnish::manage_file,
-    path    => $varnish::config_file,
-    mode    => $varnish::config_file_mode,
-    owner   => $varnish::config_file_owner,
-    group   => $varnish::config_file_group,
-    require => Package[$varnish::package],
-    notify  => $varnish::manage_service_autorestart,
-    source  => $varnish::manage_file_source,
-    content => $varnish::manage_file_content,
-    replace => $varnish::manage_file_replace,
-    audit   => $varnish::manage_audit,
-  }
-
   file { 'varnish.init':
     ensure  => $varnish::manage_file,
     path    => $varnish::config_file_init,
