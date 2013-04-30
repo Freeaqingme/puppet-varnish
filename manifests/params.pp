@@ -40,7 +40,7 @@ class varnish::params {
   $admin_listen_address = "localhost"
   $admin_listen_port    = 6081
   $ttl                  = 120
-  $min_threads          = 1
+  $min_threads          = 100
   $max_threads          = 1000
   $thread_timeout       = 120
  

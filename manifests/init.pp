@@ -17,7 +17,7 @@
 #
 # [*min_threads*]
 #   The minimum number of worker threads to start
-#   default: 1
+#   default: 100
 #
 # [*max_threads*]
 #   The maximum number of worker threads to start
