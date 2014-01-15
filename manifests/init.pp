@@ -450,6 +450,10 @@ class varnish (
         enable   => $varnish::manage_monitor,
       }
     }
+
+    if ($varnish::monitor_tool =~ /munin/) {
+      include varnish::munin
+    }
   }
 
 
