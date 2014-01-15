@@ -424,8 +424,9 @@ class varnish (
     }
   }
 
-  # TODO: Add proper if
-  include varnish::debian
+  if $::osfamily =~ /(?i:Debian)/ {
+    include varnish::debian
+  }
 
   ### Service monitoring, if enabled ( monitor => true )
   if $varnish::bool_monitor == true {
