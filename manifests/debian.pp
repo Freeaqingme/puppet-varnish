@@ -6,7 +6,6 @@ class varnish::debian
      # Service['iptables'] probably
     firewall::rule { 'varnish-apt':
       destination    => 'repo.varnish-cache.org',
-      destination_v6 => 'repo.varnish-cache.org',
       protocol       => 'tcp',
       port           => 80,
       direction      => 'output',
