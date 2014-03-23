@@ -3,7 +3,7 @@ class varnish::munin {
 
   include varnish
 
-  package { 'libxml-parser-perll':
+  package { 'libxml-parser-perl':
     notify => Exec['varnish-munin-add-plugin']
   }
 
